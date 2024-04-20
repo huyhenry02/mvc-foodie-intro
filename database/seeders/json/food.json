@@ -1,0 +1,227 @@
+[
+    {
+        "id": 1,
+        "name": "Bánh mì trứng",
+        "description": "Bánh mì được làm từ ổ bánh mì mềm, nướng hoặc nướng khô, kèm trứng chiên và các loại rau cải.",
+        "category_food_id": 1,
+        "note": "Thêm sốt cà chua hoặc sốt mayonnaise để tăng hương vị.",
+        "total_time": 15,
+        "create_user_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Bánh mì pate",
+        "description": "Bánh mì được phết pate lên bên trong, kèm theo rau sống và sốt.",
+        "category_food_id": 1,
+        "note": "Thêm trứng gà hoặc dưa leo để tăng thêm hương vị.",
+        "total_time": 10,
+        "create_user_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Bánh mì cá mòi",
+        "description": "Bánh mì chứa cá mòi nướng hoặc chiên, kèm các loại rau cải và sốt.",
+        "category_food_id": 1,
+        "note": "Thêm dưa chuột và cà chua để làm ngọt món ăn.",
+        "total_time": 20,
+        "create_user_id": 1
+    },
+    {
+        "id": 4,
+        "name": "Cháo lòng",
+        "description": "Cháo lòng là một món cháo truyền thống của Việt Nam, được làm từ lòng bò hoặc lợn, kèm theo hành, tiêu, và rau sống.",
+        "category_food_id": 1,
+        "note": "Thêm gia vị như tiêu và dầu mè để tăng hương vị.",
+        "total_time": 30,
+        "create_user_id": 1
+    },
+    {
+        "id": 5,
+        "name": "Bánh cuốn",
+        "description": "Bánh cuốn là một món ăn truyền thống của Việt Nam, gồm bánh cuốn mỏng được làm từ bột gạo, kèm theo nhân thịt và gia vị.",
+        "category_food_id": 1,
+        "note": "Thêm hành phi và nước mắm pha để tăng hương vị.",
+        "total_time": 40,
+        "create_user_id": 1
+    },
+    {
+        "id": 6,
+        "name": "Cơm gà Hải Nam",
+        "description": "Cơm trắng mềm kết hợp với gà luộc hoặc gà nướng, kèm theo dưa leo, cà chua, rau mầm và nước sốt đặc biệt.",
+        "category_food_id": 2,
+        "note": "Thêm chút nước mắm chua ngọt để tăng hương vị cho cơm.",
+        "total_time": 30,
+        "create_user_id": 1
+    },
+    {
+        "id": 7,
+        "name": "Bún chả Hà Nội",
+        "description": "Món bún chả gồm bún, chả nướng, và một chén nước dùng nướng, kèm theo rau sống và nước mắm pha.",
+        "category_food_id": 2,
+        "note": "Thêm thêm lá mắm và tỏi để tăng hương vị.",
+        "total_time": 45,
+        "create_user_id": 1
+    },
+    {
+        "id": 8,
+        "name": "Phở bò Việt Nam",
+        "description": "Món phở gồm nước dùng sôi, bánh phở, thịt bò và các loại rau thơm như ngò, húng quế.",
+        "category_food_id": 2,
+        "note": "Thêm thêm gia vị như giấm, xì dầu, hoặc tiêu để tăng hương vị.",
+        "total_time": 60,
+        "create_user_id": 1
+    },
+    {
+        "id": 9,
+        "name": "Cơm tấm Sài Gòn",
+        "description": "Cơm tấm là một món ăn dân dụng phổ biến ở miền Nam Việt Nam, thường được phục vụ với thịt heo nướng, trứng chiên, chả, dưa leo, cà chua và nước mắm.",
+        "category_food_id": 2,
+        "note": "Thêm thêm mắm nêm hoặc nước mắm pha để tăng hương vị.",
+        "total_time": 45,
+        "create_user_id": 1
+    },
+    {
+        "id": 10,
+        "name": "Bánh mì ốp-la",
+        "description": "Bánh mì ốp-la là một món ăn sáng phổ biến, gồm bánh mì nướng hoặc nướng khô, kèm theo trứng ốp-la và sốt cà chua.",
+        "category_food_id": 2,
+        "note": "Thêm thêm hành phi và tiêu để tăng hương vị.",
+        "total_time": 20,
+        "create_user_id": 1
+    },
+    {
+        "id": 11,
+        "name": "Gỏi cuốn",
+        "description": "Gỏi cuốn, còn được gọi là cuốn đa nem, là một món ăn truyền thống của Việt Nam, gồm các nguyên liệu như tôm, thịt heo, rau sống và bún, được cuốn trong lá bánh tráng.",
+        "category_food_id": 3,
+        "note": "Thêm thêm lá bạc hà để tăng hương vị.",
+        "total_time": 30,
+        "create_user_id": 1
+    },
+    {
+        "id": 12,
+        "name": "Bún riêu",
+        "description": "Món bún nước có nước dùng từ cua, cùng với bún, thịt băm, chả, cà rốt, rau sống và một chút mắm tôm.",
+        "category_food_id": 3,
+        "note": "Thêm chút mắm tôm và nước cốt dừa để tăng hương vị.",
+        "total_time": 40,
+        "create_user_id": 1
+    },
+    {
+        "id": 13,
+        "name": "Cơm rang dưa bò",
+        "description": "Món cơm rang dưa bò gồm cơm trắng rang chín kèm theo dưa bò, thịt heo, cà rốt, hành tây và gia vị.",
+        "category_food_id": 3,
+        "note": "Thêm thêm dầu mè và hành phi để tăng hương vị.",
+        "total_time": 35,
+        "create_user_id": 1
+    },
+    {
+        "id": 14,
+        "name": "Bún bò Huế",
+        "description": "Bún bò Huế là một món ăn phổ biến của miền Trung Việt Nam, gồm bún và thịt bò nấm, được kèm theo nước dùng cay và hương vị đậm đà.",
+        "category_food_id": 3,
+        "note": "Thêm thêm mắm tôm và nước cốt dừa để tăng hương vị.",
+        "total_time": 50,
+        "create_user_id": 1
+    },
+    {
+        "id": 15,
+        "name": "Hủ tiếu Nam Vang",
+        "description": "Hủ tiếu Nam Vang là một món ăn phổ biến của miền Nam Việt Nam, gồm hủ tiếu, thịt heo, tôm, nước dùng và các loại gia vị.",
+        "category_food_id": 3,
+        "note": "Thêm thêm hành lá và tiêu để tăng hương vị.",
+        "total_time": 45,
+        "create_user_id": 1
+    },
+    {
+        "id": 16,
+        "name": "Gỏi xoài",
+        "description": "Gỏi xoài là một món ăn truyền thống của Việt Nam, gồm xoài xanh cắt sợi kèm theo hành tây, ớt, dừa và gia vị.",
+        "category_food_id": 4,
+        "note": "Thêm thêm dầu mè và hành phi để tăng hương vị.",
+        "total_time": 20,
+        "create_user_id": 1
+    },
+    {
+        "id": 17,
+        "name": "Bánh tráng trộn",
+        "description": "Bánh tráng trộn là một món ăn vặt phổ biến của Việt Nam, gồm bánh tráng cắt sợi kèm theo hành phi, tiêu, đường và nước mắm.",
+        "category_food_id": 4,
+        "note": "Thêm thêm tương ớt và mắm tôm để tăng hương vị.",
+        "total_time": 15,
+        "create_user_id": 1
+    },
+    {
+        "id": 18,
+        "name": "Nem chua rán",
+        "description": "Nem chua rán là một món ăn vặt phổ biến của Việt Nam, gồm nem chua được chiên giòn kèm theo rau sống và nước chấm.",
+        "category_food_id": 4,
+        "note": "Thêm thêm nước mắm pha và lá chanh để tăng hương vị.",
+        "total_time": 25,
+        "create_user_id": 1
+    },
+    {
+        "id": 19,
+        "name": "Xôi xéo",
+        "description": "Xôi xéo là một món xôi ngọt truyền thống của Việt Nam, gồm xôi màu vàng được phủ đường, gạo nếp nướng, và dừa.",
+        "category_food_id": 4,
+        "note": "Thêm thêm nước cốt dừa để tăng hương vị.",
+        "total_time": 30,
+        "create_user_id": 1
+    },
+    {
+        "id": 20,
+        "name": "Bánh mì que",
+        "description": "Bánh mì que là một loại bánh mì nhỏ và giòn, thường được làm từ bột mì và chiên giòn.",
+        "category_food_id": 4,
+        "note": "Thêm thêm muối và hạt tiêu để tăng hương vị.",
+        "total_time": 10,
+        "create_user_id": 1
+    },
+    {
+        "id": 21,
+        "name": "Bánh mì bơ tỏi",
+        "description": "Bánh mì được phết bơ tỏi lên trên, kèm theo một chút muối và tiêu.",
+        "category_food_id": 5,
+        "note": "Thêm thêm phô mai và rau thơm để tăng hương vị.",
+        "total_time": 15,
+        "create_user_id": 1
+    },
+    {
+        "id": 22,
+        "name": "Bánh bao nhân thịt",
+        "description": "Bánh bao nhân thịt là một loại bánh mì nhỏ và mềm, được nhồi với nhân thịt và hấp chín.",
+        "category_food_id": 5,
+        "note": "Thêm thêm nước tương và đường để tăng hương vị.",
+        "total_time": 25,
+        "create_user_id": 1
+    },
+    {
+        "id": 23,
+        "name": "Sữa chua trái cây",
+        "description": "Sữa chua được pha trộn với các loại trái cây tươi hoặc đóng hộp.",
+        "category_food_id": 5,
+        "note": "Thêm thêm mật ong hoặc đường để tăng độ ngọt.",
+        "total_time": 5,
+        "create_user_id": 1
+    },
+    {
+        "id": 24,
+        "name": "Trái cây cắt lát",
+        "description": "Trái cây tươi được cắt thành từng lát hoặc từng miếng nhỏ để dễ ăn.",
+        "category_food_id": 5,
+        "note": "Chọn các loại trái cây tươi và chín đỏ để tăng hương vị và giá trị dinh dưỡng.",
+        "total_time": 10,
+        "create_user_id": 1
+    },
+    {
+        "id": 25,
+        "name": "Nước ép trái cây",
+        "description": "Nước ép trái cây được làm từ các loại trái cây tươi, như cam, lựu, dưa hấu, và dâu.",
+        "category_food_id": 5,
+        "note": "Thêm thêm đường hoặc mật ong nếu cần.",
+        "total_time": 10,
+        "create_user_id": 1
+    }
+]

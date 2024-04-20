@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Bữa sáng",
+        "description": "Bữa sáng thường là bữa ăn đầu tiên của ngày, thường bao gồm các món như bánh mì, trứng, xúc xích, phô mai, hoa quả và nước uống như cà phê hoặc trà."
+    },
+    {
+        "id": 2,
+        "name": "Bữa trưa",
+        "description": "Bữa trưa thường là bữa ăn giữa ngày, thường gồm các món như cơm, mì, salad, hoặc sandwich, kèm theo thịt, cá, rau cải và các loại gia vị khác nhau."
+    },
+    {
+        "id": 3,
+        "name": "Bữa tối",
+        "description": "Bữa tối thường là bữa ăn cuối cùng của ngày, thường bao gồm các món như cơm, mì, bánh mì, hoặc các món nướng, hấp, xào, luộc, kèm theo các loại rau và thực phẩm khác."
+    },
+    {
+        "id": 4,
+        "name": "Bữa ăn nhẹ",
+        "description": "Bữa ăn nhẹ thường là các bữa ăn nhỏ giữa các bữa chính trong ngày, như các loại hoa quả, bánh ngọt, sữa chua, hoặc các loại đồ ăn nhẹ khác."
+    },
+    {
+        "id": 5,
+        "name": "Bữa ăn muộn",
+        "description": "Bữa ăn muộn thường là bữa ăn sau bữa tối nhưng trước khi đi ngủ, thường bao gồm các loại đồ ăn nhẹ như bánh mì, trái cây, sữa, hoặc đồ uống nhẹ nhàng."
+    }
+]
