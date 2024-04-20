@@ -7,8 +7,8 @@
         <div class="nav-menu">
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li class="active"><a href="#">Trang chủ</a></li>
-                    <li><a href="">Món ăn</a></li>
+                    <li class="{{ Request::routeIs('customer.index') ? 'active' : '' }}"><a href="{{route('customer.index')}}">Trang chủ</a></li>
+                    <li class="{{ Request::routeIs('customer.food') ? 'active' : '' }}"><a href="{{route('customer.food')}}">Món ăn</a></li>
                     <li><a href="">Liên lạc</a></li>
                 </ul>
             </nav>

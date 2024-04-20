@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoryFood;
+use App\Models\Food;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -12,22 +14,36 @@ class IndexController extends Controller
 
     public function index(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('customer.layouts.index');
+        $categories = CategoryFood::all();
+        $firstFood = Food::first();
+        $foods = Food::take(4)->get();
+        return view('customer.layouts.index',
+            [
+                'firstFood' => $firstFood,
+                'foods' => $foods,
+                'categories' => $categories
+            ]);
     }
 
     public function indexFood(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('customer.list_food');
+        $foods = Food::all();
+        return view('customer.list_food', [
+            'foods' => $foods
+        ]);
     }
 
-    public function indexRecipe(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function indexRecipe(Food $food): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('customer.recipe');
+        $recipeCount = $food->recipes()->count();
+        $ingredients = $food->ingredients;
+        $recipes = $food->recipes;
+        return view('customer.recipe',
+            [
+                'food' => $food,
+                'recipeCount' => $recipeCount,
+                'ingredients' => $ingredients,
+                'recipes' => $recipes
+            ]);
     }
-
-    public function createReview()
-    {
-
-    }
-
 }

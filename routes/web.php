@@ -61,10 +61,9 @@ Route::group([
 Route::group([
     'prefix' => 'customer'
 ], function () {
-    Route::get('/', [IndexController::class, 'index'])->name('customer.index');
+    Route::get('/index', [IndexController::class, 'index'])->name('customer.index');
     Route::get('/food', [IndexController::class, 'indexFood'])->name('customer.food');
-    Route::get('/recipe', [IndexController::class, 'indexRecipe'])->name('customer.recipe');
-    Route::post('/review', [IndexController::class, 'createReview'])->name('customer.review.post');
+    Route::get('/recipe/{food}', [IndexController::class, 'indexRecipe'])->name('customer.recipe');
 });
 
 

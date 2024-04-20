@@ -35,8 +35,10 @@
         <div class="nav-menu">
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li class="active"><a href="#">Trang chủ</a></li>
-                    <li><a href="">Món ăn</a></li>
+                    <li class="{{ Request::routeIs('customer.index') ? 'active' : '' }}"><a
+                            href="{{route('customer.index')}}">Trang chủ</a></li>
+                    <li class="{{ Request::routeIs('customer.food') ? 'active' : '' }}"><a
+                            href="{{route('customer.food')}}">Món ăn</a></li>
                     <li><a href="">Liên lạc</a></li>
                 </ul>
             </nav>
@@ -60,7 +62,7 @@
                     </div>
                     <div class="pt-recipe-text">
                         <span>March 10, 2019</span>
-                        <h3>Cannellini Aglio e Olio with Salmon</h3>
+                        <h3>Món 1</h3>
                     </div>
                 </div>
             </div>
@@ -70,7 +72,7 @@
                         <i class="fa fa-plus"></i>
                     </div>
                     <div class="pt-recipe-text">
-                        <h4>Raw Vegan Carrot Cake Bites with Avocado</h4>
+                        <h4>Món 2</h4>
                     </div>
                 </div>
                 <div class="pt-recipe-item">
@@ -78,7 +80,7 @@
                         <i class="fa fa-plus"></i>
                     </div>
                     <div class="pt-recipe-text">
-                        <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                        <h4>Món 3</h4>
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
                         <i class="fa fa-plus"></i>
                     </div>
                     <div class="pt-recipe-text">
-                        <h4>Beef Burger with French Fries and Salad</h4>
+                        <h4>Món 4</h4>
                     </div>
                 </div>
                 <div class="pt-recipe-item">
@@ -96,7 +98,7 @@
                         <i class="fa fa-plus"></i>
                     </div>
                     <div class="pt-recipe-text">
-                        <h4>Raspberry Pancakes with Honey and Butter</h4>
+                        <h4>Món 5</h4>
                     </div>
                 </div>
             </div>
@@ -108,7 +110,7 @@
 <!-- Top Recipe Section Begin -->
 <section class="top-recipe spad">
     <div class="section-title">
-        <h5>Top Recipes this Week</h5>
+        <h5>Công thức tốt nhất</h5>
     </div>
     <div class="container po-relative">
         <div class="plus-icon">
@@ -121,93 +123,35 @@
                         <i class="fa fa-plus"></i>
                     </div>
                     <div class="top-recipe-text">
-                        <div class="cat-name">Desert</div>
+                        <div class="cat-name">{{$firstFood->categoryFood->name ?? ''}}</div>
                         <a href="#">
-                            <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
+                            <h4>{{$firstFood->name ?? ''}}</h4>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <p>{{$firstFood->description ?? ''}}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="top-recipe-item">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="top-recipe-img set-bg" data-setbg="/customer/img/top-recipe/recipe-2.jpg">
-                                <i class="fa fa-plus"></i>
+                @foreach($foods as $food)
+                    <div class="top-recipe-item">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="top-recipe-img set-bg" data-setbg="/customer/img/top-recipe/recipe-2.jpg">
+                                    <i class="fa fa-plus"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="top-recipe-text">
-                                <div class="cat-name">Vegan</div>
-                                <a href="#">
-                                    <h4>One Pot Weeknight Lasagna Soup Recipe</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top-recipe-item">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="top-recipe-img set-bg" data-setbg="/customer/img/top-recipe/recipe-3.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="top-recipe-text">
-                                <div class="cat-name">Meat lover</div>
-                                <a href="#">
-                                    <h4>Veggie soup with Mushrooms</h4>
-                                </a>
-                                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
+                            <div class="col-sm-8">
+                                <div class="top-recipe-text">
+                                    <div class="cat-name">{{$food->categoryFood->name ?? ''}}</div>
+                                    <a href="#">
+                                        <h4>{{$food->name ?? ''}}</h4>
+                                    </a>
+                                    <p>{{$food->description ?? ''}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="top-recipe-item">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="top-recipe-img set-bg" data-setbg="/customer/img/top-recipe/recipe-4.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="top-recipe-text">
-                                <div class="cat-name">Desert</div>
-                                <a href="#">
-                                    <h4>Caramel Ice Cream with Berries</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="top-recipe-item">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="top-recipe-img set-bg" data-setbg="/customer/img/top-recipe/recipe-5.jpg">
-                                <i class="fa fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="top-recipe-text">
-                                <div class="cat-name">Desert</div>
-                                <a href="#">
-                                    <h4>Freash Octopuse with lime juice</h4>
-                                </a>
-                                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                    magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -221,53 +165,10 @@
             <div class="col-lg-12 text-center">
                 <div class="filter-item">
                     <ul>
-                        <li class="active" data-filter="*">Vegetarian</li>
-                        <li data-filter=".mostpopular">Most popular</li>
-                        <li data-filter=".meatlover">Meat Lover</li>
-                        <li data-filter=".glutenfree">Gluten Free</li>
+                        @foreach($categories as $category)
+                            <li>{{$category->name ?? ''}}</li>
+                        @endforeach
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="cf-filter" id="category-filter">
-            <div class="cf-item mix all mostpopular">
-                <div class="cf-item-pic">
-                    <img src="/customer/img/cate-filter/cate-filter-1.jpg" alt="">
-                </div>
-                <div class="cf-item-text">
-                    <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
-                </div>
-            </div>
-            <div class="cf-item mix all mostpopular">
-                <div class="cf-item-pic">
-                    <img src="/customer/img/cate-filter/cate-filter-2.jpg" alt="">
-                </div>
-                <div class="cf-item-text">
-                    <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
-                </div>
-            </div>
-            <div class="cf-item mix all meatlover mostpopular">
-                <div class="cf-item-pic">
-                    <img src="/customer/img/cate-filter/cate-filter-3.jpg" alt="">
-                </div>
-                <div class="cf-item-text">
-                    <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
-                </div>
-            </div>
-            <div class="cf-item mix all meatlover">
-                <div class="cf-item-pic glutenfree">
-                    <img src="/customer/img/cate-filter/cate-filter-4.jpg" alt="">
-                </div>
-                <div class="cf-item-text">
-                    <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
-                </div>
-            </div>
-            <div class="cf-item mix all meatlover glutenfree">
-                <div class="cf-item-pic">
-                    <img src="/customer/img/cate-filter/cate-filter-5.jpg" alt="">
-                </div>
-                <div class="cf-item-text">
-                    <h5>Sunday Brunch: Spaghetti and Eggs Recipe</h5>
                 </div>
             </div>
         </div>
@@ -277,40 +178,6 @@
 
 <!-- Feature Recipe Section Begin -->
 <section class="feature-recipe">
-    <div class="section-title">
-        <h5>Featured Recipes</h5>
-    </div>
-    <div class="container po-relative">
-        <div class="plus-icon">
-            <i class="fa fa-plus"></i>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="fr-item">
-                    <div class="fr-item-img">
-                        <img src="/customer/img/feature-1.jpg" alt="">
-                    </div>
-                    <div class="fr-item-text">
-                        <h4>Sunday Brunch: Spaghetti and Eggs Recipe</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="fr-item">
-                    <div class="fr-item-img">
-                        <img src="/customer/img/feature-2.jpg" alt="">
-                    </div>
-                    <div class="fr-item-text">
-                        <h4>Sunday Brunch: Spaghetti and Eggs Recipe</h4>
-                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
 <!-- Feature Recipe Section End -->
 
@@ -332,7 +199,7 @@
             </div>
             <div class="col-lg-6 offset-lg-1">
                 <form action="#" class="subscribe-form">
-                    <h3>Subscribe to our newsletter</h3>
+                    <h3>Để lại lời nhắn của bạn</h3>
                     <input type="email" placeholder="Your e-mail">
                     <button type="submit">Subscribe</button>
                 </form>
@@ -342,15 +209,6 @@
                     <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
                     <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
                     <a href="#"><i class="fa fa-youtube"></i><span>Youtube</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="copyright-text">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
             </div>
         </div>
