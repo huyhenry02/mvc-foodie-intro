@@ -9,7 +9,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('customer.layouts.index');
+    return redirect()->route('customer.index');
 });
 Route::get('/login', [AuthController::class, 'indexLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
